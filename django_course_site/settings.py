@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'meetups',                      #   Registering "meetups" app in our installed app list
+
 ]
 
 MIDDLEWARE = [
