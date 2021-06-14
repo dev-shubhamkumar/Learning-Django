@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Meetup, Location, Particiant
+from .models import Meetup, Location, Participant
 
 # Register your models here. Registering here is important to show a model in Django Admin
 
@@ -12,4 +12,4 @@ class MeetupAdmin(admin.ModelAdmin):
 
 admin.site.register(Meetup, MeetupAdmin)
 admin.site.register(Location)
-admin.site.register(Particiant)
+admin.site.register(Participant)

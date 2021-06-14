@@ -12,7 +12,7 @@ class Location(models.Model):
         return f'{self.name} ({self.address})'
 
 
-class Particiant(models.Model):
+class Participant(models.Model):
     email = models.EmailField(unique=True)
 
     def __str__(self):
@@ -30,7 +30,7 @@ class Meetup(models.Model):
     description = models.TextField()
     image = models.ImageField(upload_to='images')
     location = models.ForeignKey(Location, on_delete=models.CASCADE)    # If the location gets deleted then Meetup will also get deleted
-    particiant = models.ManyToManyField(Particiant, blank=True, null=True)
+    participants = models.ManyToManyField(Participant, blank=True, null=True)
 
     def __str__(self):
         return f'{self.title} - {self.slug}'
